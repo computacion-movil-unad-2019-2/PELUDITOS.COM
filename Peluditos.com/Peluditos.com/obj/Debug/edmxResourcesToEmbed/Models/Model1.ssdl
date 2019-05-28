@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dataModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="adoptante">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombres" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="apellidos" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="edad" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="sexo" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="estadoCivil" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="correoElectronico" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="numTelefono" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="tipoMascota" Type="varchar" MaxLength="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="agenda">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fecha" Type="timestamp" Precision="0" Nullable="false" />
+    <Property Name="descripcion" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="idMascota" Type="int" Nullable="false" />
+    <Property Name="idAdoptante" Type="int" Nullable="false" />
+    <Property Name="idInstitucion" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="instituciones">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nit" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="razonSocial" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="objetivo" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mascota">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombres" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="edad" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="tamaño" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="controlMedico" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ciudadReferencia" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ubicacion" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="foto" Type="blob" />
+  </EntityType>
+  <Association Name="agenda_ibfk_1">
+    <End Role="mascota" Type="Self.mascota" Multiplicity="1" />
+    <End Role="agenda" Type="Self.agenda" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="mascota">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="agenda">
+        <PropertyRef Name="idMascota" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="agenda_ibfk_2">
+    <End Role="adoptante" Type="Self.adoptante" Multiplicity="1" />
+    <End Role="agenda" Type="Self.agenda" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="adoptante">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="agenda">
+        <PropertyRef Name="idAdoptante" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="agenda_ibfk_3">
+    <End Role="instituciones" Type="Self.instituciones" Multiplicity="1" />
+    <End Role="agenda" Type="Self.agenda" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="instituciones">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="agenda">
+        <PropertyRef Name="idInstitucion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="dataModelStoreContainer">
+    <EntitySet Name="adoptante" EntityType="Self.adoptante" Schema="peluditos" store:Type="Tables" />
+    <EntitySet Name="agenda" EntityType="Self.agenda" Schema="peluditos" store:Type="Tables" />
+    <EntitySet Name="instituciones" EntityType="Self.instituciones" Schema="peluditos" store:Type="Tables" />
+    <EntitySet Name="mascota" EntityType="Self.mascota" Schema="peluditos" store:Type="Tables" />
+    <AssociationSet Name="agenda_ibfk_1" Association="Self.agenda_ibfk_1">
+      <End Role="mascota" EntitySet="mascota" />
+      <End Role="agenda" EntitySet="agenda" />
+    </AssociationSet>
+    <AssociationSet Name="agenda_ibfk_2" Association="Self.agenda_ibfk_2">
+      <End Role="adoptante" EntitySet="adoptante" />
+      <End Role="agenda" EntitySet="agenda" />
+    </AssociationSet>
+    <AssociationSet Name="agenda_ibfk_3" Association="Self.agenda_ibfk_3">
+      <End Role="instituciones" EntitySet="instituciones" />
+      <End Role="agenda" EntitySet="agenda" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

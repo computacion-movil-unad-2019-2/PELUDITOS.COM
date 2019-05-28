@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dataModelStoreContainer" CdmEntityContainer="peluditosEntities">
+    <EntitySetMapping Name="adoptante">
+      <EntityTypeMapping TypeName="dataModel.adoptante">
+        <MappingFragment StoreEntitySet="adoptante">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombres" ColumnName="nombres" />
+          <ScalarProperty Name="apellidos" ColumnName="apellidos" />
+          <ScalarProperty Name="edad" ColumnName="edad" />
+          <ScalarProperty Name="sexo" ColumnName="sexo" />
+          <ScalarProperty Name="estadoCivil" ColumnName="estadoCivil" />
+          <ScalarProperty Name="correoElectronico" ColumnName="correoElectronico" />
+          <ScalarProperty Name="numTelefono" ColumnName="numTelefono" />
+          <ScalarProperty Name="tipoMascota" ColumnName="tipoMascota" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="agenda">
+      <EntityTypeMapping TypeName="dataModel.agenda">
+        <MappingFragment StoreEntitySet="agenda">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="idMascota" ColumnName="idMascota" />
+          <ScalarProperty Name="idAdoptante" ColumnName="idAdoptante" />
+          <ScalarProperty Name="idInstitucion" ColumnName="idInstitucion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="instituciones">
+      <EntityTypeMapping TypeName="dataModel.instituciones">
+        <MappingFragment StoreEntitySet="instituciones">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nit" ColumnName="nit" />
+          <ScalarProperty Name="razonSocial" ColumnName="razonSocial" />
+          <ScalarProperty Name="objetivo" ColumnName="objetivo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mascota">
+      <EntityTypeMapping TypeName="dataModel.mascota">
+        <MappingFragment StoreEntitySet="mascota">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombres" ColumnName="nombres" />
+          <ScalarProperty Name="edad" ColumnName="edad" />
+          <ScalarProperty Name="tamaño" ColumnName="tamaño" />
+          <ScalarProperty Name="controlMedico" ColumnName="controlMedico" />
+          <ScalarProperty Name="ciudadReferencia" ColumnName="ciudadReferencia" />
+          <ScalarProperty Name="ubicacion" ColumnName="ubicacion" />
+          <ScalarProperty Name="foto" ColumnName="foto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
