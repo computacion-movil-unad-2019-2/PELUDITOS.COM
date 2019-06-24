@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.peluditos">
+
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -10,14 +11,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Instituciones">
+        <activity android:name=".agenda"></activity>
+        <activity android:name=".listAgenda" />
+        <activity android:name=".lstAdoptante" />
+        <activity android:name=".listMascota" />
+        <activity android:name=".Main2Activity_listAdoptante" />
+        <activity android:name=".Main2Activity_Mascota" />
+        <activity android:name=".Main2Activity_Adoptante" />
+        <activity android:name=".listInstituciones" />
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".Instituciones">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

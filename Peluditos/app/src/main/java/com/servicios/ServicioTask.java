@@ -56,6 +56,7 @@ public class ServicioTask extends AsyncTask<Void, Void, String> {
             parametrosPost.put("nit",this.institucion.getNit().toString());
             parametrosPost.put("razonSocial",this.institucion.getRazonSocial().toString());
             parametrosPost.put("objetivo",this.institucion.getObjetivo().toString());
+            parametrosPost.put("ubicacion",this.institucion.getUbicacion().toString());
 
             //DEFINIR PARAMETROS DE CONEXION
             urlConnection.setReadTimeout(15000);

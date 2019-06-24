@@ -29,6 +29,21 @@ public class Instituciones extends AppCompatActivity {
         txtUbicacion = (EditText) findViewById(R.id.txtUbicacion);
         txtObjetivo = (EditText) findViewById(R.id.txtObjetivo);
 
+        String estado = getIntent().getStringExtra("actualizar");
+        if(estado.equals("1")){
+            String id = getIntent().getStringExtra("id");
+            String razonSocial = getIntent().getStringExtra("nombre");
+            String objetivo = getIntent().getStringExtra("objetivo");
+            String ubicacion = getIntent().getStringExtra("ubicacion");
+            String nit = getIntent().getStringExtra("nit");
+
+            txtNit.setText(nit);
+            txtRazonSocial.setText(razonSocial);
+            txtUbicacion.setText(ubicacion);
+            txtObjetivo.setText(objetivo);
+
+        }
+
         btnGuardar = findViewById(R.id.btnGuardar);
 
         btnGuardar.setOnClickListener(new View.OnClickListener() {
@@ -48,7 +63,12 @@ public class Instituciones extends AppCompatActivity {
         obj.setUbicacion(txtUbicacion.getText().toString());
 
 
-        ServicioTask serviciosTask = new ServicioTask(this,"http://www.hfgranadadev.com/api/Instituciones/2",obj);
+        ServicioTask serviciosTask = new ServicioTask(this,"http://192.168.1.131:8080/rest/index.php/instituciones/crear/",obj);
         serviciosTask.execute();
+
+        txtNit.setText("");
+        txtRazonSocial.setText("");
+        txtObjetivo.setText("");
+        txtUbicacion.setText("");
     }
 }
