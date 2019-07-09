@@ -16,7 +16,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".agendar"></activity>
+        <activity android:name=".listDonacionEspecie"></activity>
+        <activity android:name=".donacionEspecie" />
+        <activity android:name=".listVeterinarias" />
+        <activity android:name=".veterinarias" />
+        <activity android:name=".listGuarderias" />
+        <activity android:name=".guarderias" />
+        <activity android:name=".calificarServicio" />
+        <activity android:name=".listEvento" />
+        <activity android:name=".eventos" />
+        <activity android:name=".agendar" />
         <activity android:name=".hojaMascota" />
         <activity android:name=".mascotas" />
         <activity android:name=".adopta" />

@@ -231,7 +231,6 @@ public class mascotas extends AppCompatActivity {
                     }
                     lstMascota = new ArrayAdapter<String>(getApplication(),android.R.layout.simple_spinner_item, lstLista);
                     spTipo.setAdapter(lstMascota);
-
                 }else{
                     Log.e(TAG, "onResponse:"+ response.errorBody());
                 }
