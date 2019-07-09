@@ -46,9 +46,10 @@ public class Main2Activity_Adoptante extends AppCompatActivity {
         txtTelefono = (EditText) findViewById(R.id.txtTelefono);
         txtTipoMascota = (EditText) findViewById(R.id.txtTipoMascota);
         txtCedula = (EditText) findViewById(R.id.txtCedula);
+        btnGuardarAdop = findViewById(R.id.btnGuardarAdop);
 
         retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.100.148:8080/rest/index.php/")
+                .baseUrl("http://peluditos.online/rest/index.php/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
@@ -75,37 +76,67 @@ public class Main2Activity_Adoptante extends AppCompatActivity {
             txtTipoMascota.setText(tipoMascota);
             txtCedula.setText(cedula);
 
+
+            txtNombres.setEnabled(false);
+            txtApellidos.setEnabled(false);
+            txtEdad.setEnabled(false);
+            txtSexo.setEnabled(false);
+            txtEstadoCivil.setEnabled(false);
+            txtEmail.setEnabled(false);
+            txtTelefono.setEnabled(false);
+            txtTipoMascota.setEnabled(false);
+            txtCedula.setEnabled(false);
+
+            btnGuardarAdop.setVisibility(View.INVISIBLE);
+
+
         }
 
-        btnGuardarAdop = findViewById(R.id.btnGuardarAdop);
+
 
         btnGuardarAdop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //String id = getIntent().getStringExtra("id");
-                String nombres = txtNombres.getText().toString().trim();
-                String apellidos = txtApellidos.getText().toString().trim();
-                String edad = txtEdad.getText().toString().trim();
-                String sexo = txtSexo.getText().toString().trim();
-                String estadoCivil = txtEstadoCivil.getText().toString().trim();
-                String correoElectronico = txtEmail.getText().toString().trim();
-                String numeroTelefono = txtTelefono.getText().toString().trim();
-                String tipoMascota = txtTipoMascota.getText().toString().trim();
-                String cedula = txtCedula.getText().toString().trim();
+                try {
 
-                sendPost(cedula, nombres, apellidos, edad, sexo, estadoCivil, correoElectronico, numeroTelefono, tipoMascota);
+                    String nombres = txtNombres.getText().toString().trim();
+                    String apellidos = txtApellidos.getText().toString().trim();
+                    String edad = txtEdad.getText().toString().trim();
+                    String sexo = txtSexo.getText().toString().trim();
+                    String estadoCivil = txtEstadoCivil.getText().toString().trim();
+                    String correoElectronico = txtEmail.getText().toString().trim();
+                    String numeroTelefono = txtTelefono.getText().toString().trim();
+                    String tipoMascota = txtTipoMascota.getText().toString().trim();
+                    String cedula = txtCedula.getText().toString().trim();
 
-                txtNombres.setText("");
-                txtApellidos.setText("");
-                txtEdad.setText("");
-                txtSexo.setText("");
-                txtEstadoCivil.setText("");
-                txtEmail.setText("");
-                txtTelefono.setText("");
-                txtTipoMascota.setText("");
-                txtCedula.setText("");
+                    if(nombres.trim().isEmpty() || apellidos.trim().isEmpty() || edad.trim().isEmpty()
+                            || sexo.trim().isEmpty() || estadoCivil.trim().isEmpty()
+                            || correoElectronico.trim().isEmpty() || numeroTelefono.trim().isEmpty()
+                            || tipoMascota.trim().isEmpty() || cedula.trim().isEmpty()){
 
-                Toast.makeText(getBaseContext(),"Guardado con Exito",Toast.LENGTH_LONG).show();
+                        Toast.makeText(getBaseContext(), "un campo esta vacio, y no se pudo guardar el Adoptante", Toast.LENGTH_LONG).show();
+
+                    }else {
+
+                        sendPost(cedula, nombres, apellidos, edad, sexo, estadoCivil, correoElectronico, numeroTelefono, tipoMascota);
+
+                        txtNombres.setText("");
+                        txtApellidos.setText("");
+                        txtEdad.setText("");
+                        txtSexo.setText("");
+                        txtEstadoCivil.setText("");
+                        txtEmail.setText("");
+                        txtTelefono.setText("");
+                        txtTipoMascota.setText("");
+                        txtCedula.setText("");
+
+                        Toast.makeText(getBaseContext(), "Guardado con Exito", Toast.LENGTH_LONG).show();
+                    }
+                }catch(Exception e){
+                    e.printStackTrace();
+                    Toast.makeText(getBaseContext(), "Error "+ e.getMessage(), Toast.LENGTH_LONG).show();
+                }
             }
         });
     }

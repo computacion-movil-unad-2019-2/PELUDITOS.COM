@@ -2,7 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.peluditos">
 
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -11,7 +16,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".agenda"></activity>
+        <activity android:name=".agendar"></activity>
+        <activity android:name=".hojaMascota" />
+        <activity android:name=".mascotas" />
+        <activity android:name=".adopta" />
+        <activity android:name=".agenda" />
         <activity android:name=".listAgenda" />
         <activity android:name=".lstAdoptante" />
         <activity android:name=".listMascota" />

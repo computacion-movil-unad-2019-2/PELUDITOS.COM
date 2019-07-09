@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ListView lv1;
 
-    private String opciones [] = {"Instituciones","Mascotas","Adoptante", "Agenda"};
+    private String opciones [] = {"Instituciones","Mascotas","Adoptante", "Adopta"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,14 +35,15 @@ public class MainActivity extends AppCompatActivity {
                 }else if(opcion == "Mascotas"){
                     //Toast.makeText(MainActivity.this, opcion, Toast.LENGTH_SHORT).show();
                     Intent i = new Intent(MainActivity.this, listMascota.class);
+                    //Intent i = new Intent(MainActivity.this, mascotas.class);
                     startActivity(i);
                 }else if(opcion == "Adoptante"){
                     //Toast.makeText(MainActivity.this, opcion, Toast.LENGTH_SHORT).show();
                     Intent in = new Intent(MainActivity.this, lstAdoptante.class);
                     startActivity(in);
-                }else if(opcion == "Agenda"){
+                }else if(opcion == "Adopta"){
                     //Toast.makeText(MainActivity.this, opcion, Toast.LENGTH_SHORT).show();
-                    Intent in = new Intent(MainActivity.this, listAgenda.class);
+                    Intent in = new Intent(MainActivity.this, adopta.class);
                     startActivity(in);
                 }
             }

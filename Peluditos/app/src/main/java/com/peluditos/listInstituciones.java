@@ -40,7 +40,7 @@ public class listInstituciones extends AppCompatActivity {
 
         lv2 = (ListView)findViewById(R.id.lv2);
         retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.1.131:8080/rest/index.php/")
+                .baseUrl("http://peluditos.online/rest/index.php/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
