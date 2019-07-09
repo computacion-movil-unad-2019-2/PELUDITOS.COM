@@ -38,7 +38,7 @@ public class listMascota extends AppCompatActivity {
 
         lvMascota =  (ListView)findViewById(R.id.lvMascota);
         retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.1.131:8080/rest/index.php/")
+                .baseUrl("http://peluditos.online/rest/index.php/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
@@ -46,7 +46,7 @@ public class listMascota extends AppCompatActivity {
         btnNuevo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(), Main2Activity_Mascota.class );
+                Intent intent = new Intent(getBaseContext(), mascotas.class );
                 intent.putExtra("actualizar","0");
                 intent.putExtra("id", "0");
                 startActivity(intent);
@@ -60,7 +60,7 @@ public class listMascota extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 try{
                     mascota obj = (mascota) adapter.getItem(position);
-                    Intent in = new Intent(getBaseContext(), Main2Activity_Mascota.class);
+                    Intent in = new Intent(getBaseContext(), mascotas.class);
                     in.putExtra("actualizar","1");
                     in.putExtra("id", obj.getId());
                     in.putExtra("nombres", obj.getNombres());
@@ -69,6 +69,9 @@ public class listMascota extends AppCompatActivity {
                     in.putExtra("controlMedico", obj.getControlMedico());
                     in.putExtra("ciudadReferencia", obj.getCiudadReferencia());
                     in.putExtra("ubicacion", obj.getUbicacion());
+                    in.putExtra("tipo", obj.getTipo());
+                    in.putExtra("foto",obj.getFoto());
+                    in.putExtra("estado",obj.getEstado());
                     startActivity(in);
                 }catch(Exception ex){
                     ex.printStackTrace();
