@@ -34,8 +34,8 @@ public class Encontraranimal extends AppCompatActivity {
         if(estado.equals("1")){
             String id = getIntent().getStringExtra("id");
             String raza = getIntent().getStringExtra("raza");
+            String nombremascota = getIntent().getStringExtra("nombre");
             String ubicacion = getIntent().getStringExtra("ubicacion");
-            String nombremascota = getIntent().getStringExtra("nombremascota");
             String caracteristicas = getIntent().getStringExtra("caracteristicas");
 
             txtRaza.setEnabled(false);
@@ -69,12 +69,12 @@ public class Encontraranimal extends AppCompatActivity {
                     || txtCaracteristicas.getText().toString().trim().isEmpty()
                     || txtUbicacion.getText().toString().trim().isEmpty()){
 
-                Toast.makeText(getBaseContext(), "un campo esta vacio, y no se pudo guardar la Institución", Toast.LENGTH_LONG).show();
+                Toast.makeText(getBaseContext(), "un campo esta vacio, y no se pudo guardar El Reporte", Toast.LENGTH_LONG).show();
 
             }else{
                 CEncontraranimal obj = new CEncontraranimal();
                 obj.setRaza(txtRaza.getText().toString());
-                obj.setNombremascota(txtRaza.getText().toString());
+                obj.setNombremascota(txtNmascota.getText().toString());
                 obj.setCaracteristicas(txtCaracteristicas.getText().toString());
                 obj.setUbicacion(txtUbicacion.getText().toString());
 
@@ -84,7 +84,7 @@ public class Encontraranimal extends AppCompatActivity {
                 ServicioTaskEncontrarAnimal.execute();
 
                 txtRaza.setText("");
-                txtRaza.setText("");
+                txtNmascota.setText("");
                 txtCaracteristicas.setText("");
                 txtUbicacion.setText("");
 

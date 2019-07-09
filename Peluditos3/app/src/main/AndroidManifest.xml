@@ -16,7 +16,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Encontraranimal"></activity>
+        <activity android:name=".Main2Activity_inicioSesion"></activity>
+        <activity android:name=".Main2Activity_registro" />
+        <activity android:name=".Main2Activity_Menu" />
+        <activity android:name=".Denunciasmaltrato" />
+        <activity android:name=".Main2Activity_denunciaslist" />
+        <activity android:name=".Encontraranimal" />
         <activity android:name=".Main2Activity_list_encontraranimal" />
         <activity android:name=".agendar" />
         <activity android:name=".hojaMascota" />
