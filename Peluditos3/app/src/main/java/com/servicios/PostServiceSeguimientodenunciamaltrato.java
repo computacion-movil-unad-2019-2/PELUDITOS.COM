@@ -10,14 +10,14 @@ import retrofit2.http.POST;
 
 public interface PostServiceSeguimientodenunciamaltrato {
 
-    //@GET("denunciamaltrato/")
+    @GET("seguimientodenuncia/")
     //Call<denunciamaltratoRespuesta> obtenerLista();
 
     @FormUrlEncoded
-    @POST("denunciamaltrato/crearseguimiento/")
-    Call<String> savePost(@Field("denunciaid") String id,
-                          @Field("id") String ubicacion,
-                          @Field("seguimiento") String descripcion
+    @POST(value = "seguimientodenuncia/crear/")
+    Call<String> savePost(@Field("id") String id,
+                          @Field("seguimiento") String seguimiento
+
 
     );
 

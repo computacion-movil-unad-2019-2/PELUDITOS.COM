@@ -14,13 +14,19 @@ public interface PostServiceDenunciamaltrato {
     @GET("denunciamaltrato/")
     Call<denunciamaltratoRespuesta> obtenerLista();
     @FormUrlEncoded
-    @POST("denunciamaltrato/ crearseguimiento/")
+    @POST("denunciamaltrato/crear/")
     Call<String> savePost(@Field("id") String id,
                           @Field("ubicacion") String ubicacion,
                           @Field("descripcion") String descripcion
 
     );
 
+    @POST(value = "denunciamaltrato/crearseguimiento/")
+    Call<String> savePost(@Field("id") String id,
+                          @Field("seguimiento") String seguimiento
+
+
+    );
 
 
     void execute();

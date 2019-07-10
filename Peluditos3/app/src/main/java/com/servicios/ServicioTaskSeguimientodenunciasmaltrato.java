@@ -56,7 +56,7 @@ public class ServicioTaskSeguimientodenunciasmaltrato extends AsyncTask<Void, Vo
 
             JSONObject parametrosPost = new JSONObject();
             parametrosPost.put("seguimiento",this.seguimientodenuncia.getSeguimiento().toString());
-            parametrosPost.put("idddenuncia",this.seguimientodenuncia.getIddenuncia().toString());
+          //  parametrosPost.put("idddenuncia",this.seguimientodenuncia.getIddenuncia().toString());
 
 
             //DEFINIR PARAMETROS DE CONEXION

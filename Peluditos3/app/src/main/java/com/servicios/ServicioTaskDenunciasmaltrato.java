@@ -57,6 +57,7 @@ public class ServicioTaskDenunciasmaltrato extends AsyncTask<Void, Void, String>
             parametrosPost.put("ubicacion",this.denunciamaltrato.getUbicacion().toString());
             parametrosPost.put("seguimiento",this.denunciamaltrato.getSeguimiento().toString());
 
+
             //DEFINIR PARAMETROS DE CONEXION
             urlConnection.setReadTimeout(15000);
             urlConnection.setConnectTimeout(15000);

@@ -54,8 +54,8 @@
 
     <Button
         android:id="@+id/denunciarBtn"
-        android:layout_width="119dp"
-        android:layout_height="48dp"
+        android:layout_width="289dp"
+        android:layout_height="47dp"
         android:layout_marginStart="58dp"
         android:layout_marginLeft="58dp"
         android:layout_marginTop="20dp"
@@ -99,77 +99,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/descripcionadd" />
-
-    <Button
-        android:id="@+id/BtnActualizar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
-        android:layout_marginTop="20dp"
-        android:background="#32A036"
-        android:text="Actualizar"
-        android:textColor="#FBFFFFFF"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtDescripcion" />
-
-    <Button
-        android:id="@+id/BtnEliminar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginRight="40dp"
-        android:background="#E91E63"
-        android:text="Eliminar"
-        android:textColor="#FBFFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtDescripcion" />
-
-    <TextView
-        android:id="@+id/TxtVseguimiento"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginStart="126dp"
-        android:layout_marginLeft="126dp"
-        android:layout_marginTop="84dp"
-        android:layout_marginEnd="153dp"
-        android:layout_marginRight="153dp"
-        android:text="Agregar Seguimiento"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtDescripcion" />
-
-    <EditText
-        android:id="@+id/txtSeguimiento"
-        android:layout_width="315dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="49dp"
-        android:layout_marginLeft="49dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="47dp"
-        android:layout_marginRight="47dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TxtVseguimiento" />
-
-    <Button
-        android:id="@+id/BtnAddSeguimiento"
-        android:layout_width="262dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="74dp"
-        android:layout_marginLeft="74dp"
-        android:layout_marginTop="11dp"
-        android:layout_marginEnd="75dp"
-        android:layout_marginRight="75dp"
-        android:background="#00796b"
-        android:text="Agregar Seguimiento"
-        android:textColor="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtSeguimiento" />
 
 </android.support.constraint.ConstraintLayout>

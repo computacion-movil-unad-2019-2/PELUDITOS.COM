@@ -40,10 +40,11 @@ public class adapterDenunciamaltrato extends BaseAdapter {
         if(convertView == null){
             LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
             convertView = layoutInflater.inflate(R.layout.iteminst,null);
-            //TextView id = (TextView)convertView.findViewById(R.id.id);
-            TextView nombre = (TextView)convertView.findViewById(R.id.nombre);
+            TextView id = (TextView)convertView.findViewById(R.id.id);
+             TextView nombre = (TextView)convertView.findViewById(R.id.nombre);
 
             //id.setText(arrayList.get(position).getNit());
+            id.setText(arrayList.get(position).getId());
             nombre.setText(arrayList.get(position).getDescripcion());
         }
         return convertView;
