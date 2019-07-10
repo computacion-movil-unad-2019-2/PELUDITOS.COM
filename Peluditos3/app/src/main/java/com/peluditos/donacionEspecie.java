@@ -55,14 +55,14 @@ public class donacionEspecie extends AppCompatActivity {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
-        String estado = getIntent().getStringExtra("actualizar");
+         String estado = getIntent().getStringExtra("actualizar");
         if(estado.equals("1")){
             String producto = getIntent().getStringExtra("producto");
             String descripcion = getIntent().getStringExtra("descripcion");
             String fecha = getIntent().getStringExtra("fecha");
             String lugar = getIntent().getStringExtra("lugar");
             String cantidad = getIntent().getStringExtra("cantidad");
-            String institucion = getIntent().getStringExtra("institucion");
+            //String institucion = getIntent().getStringExtra("institucion");
 
 
             Producto.setText(producto);
@@ -79,7 +79,7 @@ public class donacionEspecie extends AppCompatActivity {
             Instituciones.setEnabled(false);
 
             btnConfirmar.setVisibility(View.INVISIBLE);
-        }
+        } 
        cargarTipo();
         btnConfirmar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -172,7 +172,6 @@ public class donacionEspecie extends AppCompatActivity {
                     Log.e(TAG, "onResponse:"+ response.errorBody());
                 }
             }
-
             @Override
             public void onFailure(Call<institucionesRespuesta> call, Throwable t) {
                 Log.e(TAG, "onFailure: "+ t.getMessage());

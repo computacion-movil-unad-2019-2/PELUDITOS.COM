@@ -61,7 +61,7 @@ public class Main2Activity_Menu extends AppCompatActivity {
                         startActivity(ev);
                     }
                     else if(opcion == "Donaciones en Especie"){
-                        Intent ev = new Intent(Main2Activity_Menu.this, donacionEspecie.class);
+                        Intent ev = new Intent(Main2Activity_Menu.this, listDonacionEspecie.class);
                         startActivity(ev);
                     }else if (opcion == "Animales Perdidos") {
                         //Toast.makeText(MainActivity.this, opcion, Toast.LENGTH_SHORT).show();
