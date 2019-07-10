@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -13,21 +14,31 @@ public class MainActivity extends AppCompatActivity {
 
     private ListView lv1;
 
-    private String opciones [] = {"Instituciones","Mascotas","Adoptante", "Adopta", "Eventos","Calificar Servicio","Guarderias","Veterinarias","Donaciones en Especie"};
+  //  private String opciones [] = {"Instituciones","Mascotas","Adoptante", "Adopta", "Eventos","Calificar Servicio","Guarderias","Veterinarias","Donaciones en Especie"};
 
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Button btnRegistro = (Button) findViewById(R.id.Btn_Registro);
+        Button btnInicio = (Button) findViewById(R.id.Btn_Inicio);
 
-        lv1 = (ListView)findViewById(R.id.lv1);
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.list_item_opciones, opciones);
-        lv1.setAdapter(adapter);
-
-        lv1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        btnRegistro.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            public void onClick(View v) {
+                Intent intent = new Intent(getBaseContext(), Main2Activity_registro.class );
+                intent.putExtra("actualizar","0");
+                startActivity(intent);
+            }
+        });
+
+        btnInicio.setOnClickListener(new View.OnClickListener() {
+            @Override
+
+           /* public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String opcion = opciones[position];
                 if(opcion == "Instituciones"){
                     //Toast.makeText(MainActivity.this, opcion, Toast.LENGTH_SHORT).show();
@@ -60,8 +71,17 @@ public class MainActivity extends AppCompatActivity {
                 else if(opcion == "Donaciones en Especie"){
                     Intent ev = new Intent(MainActivity.this, listDonacionEspecie.class);
                     startActivity(ev);
-                }
+                } */
+
+            public void onClick(View v) {
+                Intent intent = new Intent(getBaseContext(), Main2Activity_inicioSesion.class );
+                intent.putExtra("actualizar","0");
+                startActivity(intent);
             }
         });
+
+
+
     }
+
 }

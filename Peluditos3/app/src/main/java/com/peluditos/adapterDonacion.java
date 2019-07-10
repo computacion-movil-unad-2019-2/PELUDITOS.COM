@@ -44,7 +44,7 @@ public class adapterDonacion extends BaseAdapter {
             TextView nombre = (TextView)convertView.findViewById(R.id.nombre);
 
             //id.setText(arrayList.get(position).getNit());
-            nombre.setText(arrayList.get(position).getProducto()+" "arrayList.get(position).getDescripcion());
+            nombre.setText(arrayList.get(position).getProducto()+" "+arrayList.get(position).getDescripcion());
         }
         return convertView;
     }

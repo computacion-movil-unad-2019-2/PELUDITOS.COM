@@ -73,11 +73,13 @@ public class listInstituciones extends AppCompatActivity {
         btnNuevo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(), Instituciones.class );
-                intent.putExtra("actualizar","0");
+                Intent intent = new Intent(getBaseContext(), Encontraranimal.class );
+                //  intent.putExtra("actualizar","0");
+                //  intent.putExtra("id", "0");
                 startActivity(intent);
             }
         });
+
     }
 
     private void obtenerDatos() {
