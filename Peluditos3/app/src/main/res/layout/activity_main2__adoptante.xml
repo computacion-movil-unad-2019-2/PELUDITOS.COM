@@ -34,25 +34,29 @@
                     android:id="@+id/txtCedula"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="Identificacion" />
+                    android:hint="Identificacion"
+                    android:inputType="number"/>
 
                 <EditText
                     android:id="@+id/txtNombres"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="Nombres" />
+                    android:hint="Nombres"
+                    android:inputType="text"/>
 
                 <EditText
                     android:id="@+id/txtApellidos"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="Apellidos" />
+                    android:hint="Apellidos"
+                    android:inputType="text"/>
 
                 <EditText
                     android:id="@+id/txtEdad"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="Edad" />
+                    android:hint="Edad"
+                    android:inputType="number"/>
 
                 <EditText
                     android:id="@+id/txtSexo"
@@ -64,13 +68,15 @@
                     android:id="@+id/txtEstadoCivil"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="Estado Civil" />
+                    android:hint="Estado Civil"
+                    android:inputType="text"/>
 
                 <EditText
                     android:id="@+id/txtEmail"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="Correo Electronico" />
+                    android:hint="Correo Electronico"
+                    android:inputType="textWebEmailAddress"/>
 
                 <EditText
                     android:id="@+id/txtTelefono"
@@ -85,11 +91,27 @@
                     android:layout_height="match_parent"
                     android:hint="Tipo Mascota" />
 
+                <TextView
+                    android:id="@+id/txtVTipoMascota"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mascota que Prefiere" />
+
+                <Spinner
+                    android:id="@+id/spTipo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#0000FF"
+                    />
+
                 <Button
                     android:id="@+id/btnGuardarAdop"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="Guardar"/>
+                    android:background="@drawable/button_rounded"
+                    android:text="Guardar"
+                    android:textColor="#ffff"
+                    android:textSize="14sp" />
 
             </LinearLayout>
         </ScrollView>

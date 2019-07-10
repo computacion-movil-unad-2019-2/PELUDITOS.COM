@@ -2,12 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.peluditos">
 
-    <uses-feature
-        android:name="android.hardware.camera"
-        android:required="true" />
-
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -16,25 +14,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-<<<<<<< HEAD
-        <activity android:name=".Main2Activity_inicioSesion"></activity>
-        <activity android:name=".Main2Activity_registro" />
-        <activity android:name=".Main2Activity_Menu" />
-        <activity android:name=".Denunciasmaltrato" />
-        <activity android:name=".Main2Activity_denunciaslist" />
-        <activity android:name=".Encontraranimal" />
-        <activity android:name=".Main2Activity_list_encontraranimal" />
-=======
-        <activity android:name=".listDonacionEspecie"></activity>
-        <activity android:name=".donacionEspecie" />
-        <activity android:name=".listVeterinarias" />
-        <activity android:name=".veterinarias" />
-        <activity android:name=".listGuarderias" />
-        <activity android:name=".guarderias" />
-        <activity android:name=".calificarServicio" />
-        <activity android:name=".listEvento" />
-        <activity android:name=".eventos" />
->>>>>>> 305cd694dbd4a63e6f2a9a0fa5f330e561576d76
+        <activity android:name=".cumpleAgenda"></activity>
         <activity android:name=".agendar" />
         <activity android:name=".hojaMascota" />
         <activity android:name=".mascotas" />
@@ -61,6 +41,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.peluditos.android.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths">
+            </meta-data>
+        </provider>
     </application>
 
 </manifest>

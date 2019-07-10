@@ -46,6 +46,7 @@ public class lstAdoptante extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getBaseContext(), Main2Activity_Adoptante.class );
                 intent.putExtra("actualizar","0");
+                finish();
                 startActivity(intent);
             }
         });
@@ -70,6 +71,7 @@ public class lstAdoptante extends AppCompatActivity {
                     in.putExtra("numTelefono", obj.getNumTelefono());
                     in.putExtra("tipoMascota", obj.getTipoMascota());
                     in.putExtra("cedula", obj.getCedula());
+                    finish();
                     startActivity(in);
                 }catch(Exception ex){
                     ex.printStackTrace();

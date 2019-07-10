@@ -48,5 +48,8 @@
         app:layout_constraintHorizontal_bias="0.969"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtTitulo"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        android:textSize="14sp"
+        android:textColor="#ffff"
+        android:background="@drawable/button_rounded"/>
 </android.support.constraint.ConstraintLayout>

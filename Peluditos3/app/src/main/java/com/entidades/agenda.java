@@ -6,10 +6,37 @@ public class agenda {
 
     public String id;
     public String mensaje;
-    public Date fecha;
     public String mascota;
     public String adoptante;
-    public String institucion;
+    public Date fechaAgenda;
+
+    public Date getFechaAgenda() {
+        return fechaAgenda;
+    }
+
+    public void setFechaAgenda(Date fechaAgenda) {
+        this.fechaAgenda = fechaAgenda;
+    }
+
+    public String getHora() {
+        return hora;
+    }
+
+    public void setHora(String hora) {
+        this.hora = hora;
+    }
+
+    public String hora;
+
+    public String getUbicacion() {
+        return ubicacion;
+    }
+
+    public void setUbicacion(String ubicacion) {
+        this.ubicacion = ubicacion;
+    }
+
+    public String ubicacion;
 
     public String getId() {
         return id;
@@ -25,14 +52,6 @@ public class agenda {
 
     public void setMensaje(String mensaje) {
         this.mensaje = mensaje;
-    }
-
-    public Date getFecha() {
-        return fecha;
-    }
-
-    public void setFecha(Date fecha) {
-        this.fecha = fecha;
     }
 
     public String getMascota() {
@@ -51,11 +70,5 @@ public class agenda {
         this.adoptante = adoptante;
     }
 
-    public String getInstitucion() {
-        return institucion;
-    }
 
-    public void setInstitucion(String institucion) {
-        this.institucion = institucion;
-    }
 }

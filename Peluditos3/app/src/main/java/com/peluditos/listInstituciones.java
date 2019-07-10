@@ -31,6 +31,7 @@ public class listInstituciones extends AppCompatActivity {
     private Retrofit retrofit;
     private ListView lv2;
     private Button btnNuevo;
+    private Button btnEdit;
     AdapterInstituciones adapter;
 
     @Override
@@ -39,6 +40,7 @@ public class listInstituciones extends AppCompatActivity {
         setContentView(R.layout.activity_list_instituciones);
 
         lv2 = (ListView)findViewById(R.id.lv2);
+        btnEdit = (Button)findViewById(R.id.btnEdit);
         retrofit = new Retrofit.Builder()
                 .baseUrl("http://peluditos.online/rest/index.php/")
                 .addConverterFactory(GsonConverterFactory.create())
@@ -51,8 +53,8 @@ public class listInstituciones extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 try{
                     CInstituciones obj = (CInstituciones) adapter.getItem(position);
-                    Log.e("Instituciones :", obj.getNit()+"-"+obj.getRazonSocial());
-                    Toast.makeText(getBaseContext(), "Tu código es :"+obj.getNit(), Toast.LENGTH_LONG).show();
+                    //Log.e("Instituciones :", obj.getNit()+"-"+obj.getRazonSocial());
+                    //Toast.makeText(getBaseContext(), "Tu código es :"+obj.getNit(), Toast.LENGTH_LONG).show();
 
                     Intent in = new Intent(getBaseContext(), Instituciones.class);
                     in.putExtra("actualizar","1");
@@ -61,6 +63,9 @@ public class listInstituciones extends AppCompatActivity {
                     in.putExtra("objetivo", obj.getObjetivo());
                     in.putExtra("ubicacion", obj.getUbicacion());
                     in.putExtra("nit", obj.getNit());
+                    in.putExtra("tipo", obj.getTipo());
+                    in.putExtra("cuenta", obj.getCuenta());
+                    in.putExtra("banco", obj.getBanco());
                     startActivity(in);
                 }catch(Exception ex){
                     ex.printStackTrace();
@@ -73,13 +78,12 @@ public class listInstituciones extends AppCompatActivity {
         btnNuevo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(), Encontraranimal.class );
-                //  intent.putExtra("actualizar","0");
-                //  intent.putExtra("id", "0");
+                Intent intent = new Intent(getBaseContext(), Instituciones.class );
+                intent.putExtra("actualizar","0");
+                finish();
                 startActivity(intent);
             }
         });
-
     }
 
     private void obtenerDatos() {
@@ -93,6 +97,10 @@ public class listInstituciones extends AppCompatActivity {
                 if(response.isSuccessful()){
                     institucionesRespuesta lstRespuesta = response.body();
                     ArrayList<CInstituciones> lstInst = lstRespuesta.getResult();
+                    for(CInstituciones item : lstInst)
+                    {
+                        Log.e(TAG, "onResponse:"+ item.getId()+" "+item.getRazonSocial());
+                    }
                     adapter = new AdapterInstituciones(getApplication(),lstInst);
                     lv2.setAdapter(adapter);
                 }else{
@@ -102,7 +110,7 @@ public class listInstituciones extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<institucionesRespuesta> call, Throwable t) {
-                Log.e(TAG, "onFailure: "+ t.getMessage());
+                //Log.e(TAG, "onFailure: "+ t.getMessage());
             }
         });
 
