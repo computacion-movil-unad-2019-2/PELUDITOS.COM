@@ -43,9 +43,8 @@ public class AdapterInstituciones extends BaseAdapter {
             //TextView id = (TextView)convertView.findViewById(R.id.id);
             TextView nombre = (TextView)convertView.findViewById(R.id.nombre);
 
-            //id.setText(arrayList.get(position).getId());
-            String nombreInstitucion = arrayList.get(position).getRazonSocial();
-            nombre.setText(nombreInstitucion);
+            //id.setText(arrayList.get(position).getNit());
+            nombre.setText(arrayList.get(position).getRazonSocial());
         }
         return convertView;
     }

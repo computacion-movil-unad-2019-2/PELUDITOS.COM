@@ -94,34 +94,10 @@ public class hojaMascota extends AppCompatActivity {
         btnGuardar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                String edad = getIntent().getStringExtra("edad");
-                String tamano = getIntent().getStringExtra("tamano");
-                String controlMedico = getIntent().getStringExtra("controlMedico");
-                String ciudadReferencia = getIntent().getStringExtra("ciudadReferencia");
-                String ubicacion = getIntent().getStringExtra("ubicacion");
-                String tipo = getIntent().getStringExtra("tipo");
-                String foto = getIntent().getStringExtra("foto");
-                String strEstado = getIntent().getStringExtra("estado");
-
                 Intent in = new Intent(getBaseContext(), agendar.class );
                 in.putExtra("actualizar","0");
                 in.putExtra("id",getIntent().getStringExtra("id"));
                 in.putExtra("nombreMascota",getIntent().getStringExtra("nombres"));
-
-                in.putExtra("edad",edad);
-                in.putExtra("tamano",tamano);
-                in.putExtra("controlMedico",controlMedico);
-                in.putExtra("ciudadReferencia",ciudadReferencia);
-                in.putExtra("ubicacion",ubicacion);
-                in.putExtra("tipo",tipo);
-
-                // parametros que se deben de recibir del storage al momento del login
-                in.putExtra( "idAdoptante","1");
-                in.putExtra("correo","avillafana0394@gmail.com");
-
-
-                finish();
 
                 startActivity(in);
             }
