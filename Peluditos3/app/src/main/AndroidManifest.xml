@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.peluditos">
+    package="com.peluditos"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="27" />
 
     <uses-feature
         android:name="android.hardware.camera"
@@ -11,56 +17,51 @@
 
     <application
         android:allowBackup="true"
+        android:debuggable="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-<<<<<<< HEAD
-        <activity android:name=".Main2Activity_inicioSesion"></activity>
-        <activity android:name=".Main2Activity_registro" />
-        <activity android:name=".Main2Activity_Menu" />
-        <activity android:name=".Denunciasmaltrato" />
-        <activity android:name=".Main2Activity_denunciaslist" />
-        <activity android:name=".Encontraranimal" />
-        <activity android:name=".Main2Activity_list_encontraranimal" />
-=======
-        <activity android:name=".listDonacionEspecie"></activity>
-        <activity android:name=".donacionEspecie" />
-        <activity android:name=".listVeterinarias" />
-        <activity android:name=".veterinarias" />
-        <activity android:name=".listGuarderias" />
-        <activity android:name=".guarderias" />
-        <activity android:name=".calificarServicio" />
-        <activity android:name=".listEvento" />
-        <activity android:name=".eventos" />
->>>>>>> 305cd694dbd4a63e6f2a9a0fa5f330e561576d76
-        <activity android:name=".agendar" />
-        <activity android:name=".hojaMascota" />
-        <activity android:name=".mascotas" />
-        <activity android:name=".adopta" />
-        <activity android:name=".agenda" />
-        <activity android:name=".listAgenda" />
-        <activity android:name=".lstAdoptante" />
-        <activity android:name=".listMascota" />
-        <activity android:name=".Main2Activity_listAdoptante" />
-        <activity android:name=".Main2Activity_Mascota" />
-        <activity android:name=".Main2Activity_Adoptante" />
-        <activity android:name=".listInstituciones" />
-        <activity android:name=".MainActivity">
+        android:testOnly="true"
+        android:theme="@style/AppTheme" >
+        <activity android:name="com.peluditos.Main2Activity_inicioSesion" />
+        <activity android:name="com.peluditos.Main2Activity_registro" />
+        <activity android:name="com.peluditos.Main2Activity_Menu" />
+        <activity android:name="com.peluditos.Denunciasmaltrato" />
+        <activity android:name="com.peluditos.Main2Activity_denunciaslist" />
+        <activity android:name="com.peluditos.Encontraranimal" />
+        <activity android:name="com.peluditos.Main2Activity_list_encontraranimal" />
+        <activity android:name="com.peluditos.agendar" />
+        <activity android:name="com.peluditos.hojaMascota" />
+        <activity android:name="com.peluditos.mascotas" />
+        <activity android:name="com.peluditos.adopta" />
+        <activity android:name="com.peluditos.agenda" />
+        <activity android:name="com.peluditos.listAgenda" />
+        <activity android:name="com.peluditos.lstAdoptante" />
+        <activity android:name="com.peluditos.listMascota" />
+        <activity android:name="com.peluditos.Main2Activity_listAdoptante" />
+        <activity android:name="com.peluditos.Main2Activity_Mascota" />
+        <activity android:name="com.peluditos.Main2Activity_Adoptante" />
+        <activity android:name="com.peluditos.listInstituciones" />
+        <activity android:name="com.peluditos.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Instituciones">
+        <activity android:name="com.peluditos.Instituciones" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <provider
+            android:name="com.android.tools.ir.server.InstantRunContentProvider"
+            android:authorities="com.peluditos.com.android.tools.ir.server.InstantRunContentProvider"
+            android:multiprocess="true" />
     </application>
 
 </manifest>
