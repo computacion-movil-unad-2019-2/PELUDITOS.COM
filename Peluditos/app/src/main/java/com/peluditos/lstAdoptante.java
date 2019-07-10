@@ -36,7 +36,7 @@ public class lstAdoptante extends AppCompatActivity {
 
         lvAdoptante =  (ListView)findViewById(R.id.lvAdoptante);
         retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.100.148:8080/rest/index.php/")
+                .baseUrl("http://peluditos.online/rest/index.php/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 

@@ -13,9 +13,12 @@ public class Main2Activity_Menu extends AppCompatActivity {
 
         private ListView lv1;
 
-        private String opciones [] = {"Instituciones","Mascotas","Adoptante", "Adopta",
-                "Animales Perdidos", "Denuncias Maltrato"};
-        @Override
+
+
+    private String opciones [] = {"Instituciones","Mascotas","Adoptante", "Adopta",
+            "Eventos","Calificar Servicio","Guarderias","Veterinarias","Donaciones en Especie",   "Animales Perdidos", "Denuncias Maltrato"};
+
+    @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_menu);
@@ -29,24 +32,38 @@ public class Main2Activity_Menu extends AppCompatActivity {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                     String opcion = opciones[position];
-                    if (opcion == "Instituciones") {
+                    if(opcion == "Instituciones"){
                         //Toast.makeText(MainActivity.this, opcion, Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(Main2Activity_Menu.this, listInstituciones.class);
+                        Intent intent = new Intent(Main2Activity_Menu.this, listInstituciones.class );
                         startActivity(intent);
-                    } else if (opcion == "Mascotas") {
+                    }else if(opcion == "Mascotas"){
                         //Toast.makeText(MainActivity.this, opcion, Toast.LENGTH_SHORT).show();
                         Intent i = new Intent(Main2Activity_Menu.this, listMascota.class);
                         //Intent i = new Intent(MainActivity.this, mascotas.class);
                         startActivity(i);
-                    } else if (opcion == "Adoptante") {
+                    }else if(opcion == "Adoptante"){
                         //Toast.makeText(MainActivity.this, opcion, Toast.LENGTH_SHORT).show();
                         Intent in = new Intent(Main2Activity_Menu.this, lstAdoptante.class);
                         startActivity(in);
-                    } else if (opcion == "Adopta") {
-                        //Toast.makeText(MainActivity.this, opcion, Toast.LENGTH_SHORT).show();
-                        Intent in = new Intent(Main2Activity_Menu.this, adopta.class);
-                        startActivity(in);
-                    } else if (opcion == "Animales Perdidos") {
+                    }
+                    else if(opcion == "Eventos"){
+                        Intent ev = new Intent(Main2Activity_Menu.this, listEvento.class);
+                        startActivity(ev);
+                    }else if(opcion == "Calificar Servicio"){
+                        Intent ev = new Intent(Main2Activity_Menu.this, calificarServicio.class);
+                        startActivity(ev);
+                    }else if(opcion == "Guarderias"){
+                        Intent ev = new Intent(Main2Activity_Menu.this, listGuarderias.class);
+                        startActivity(ev);
+                    }
+                    else if(opcion == "Veterinarias"){
+                        Intent ev = new Intent(Main2Activity_Menu.this, listVeterinarias.class);
+                        startActivity(ev);
+                    }
+                    else if(opcion == "Donaciones en Especie"){
+                        Intent ev = new Intent(Main2Activity_Menu.this, donacionEspecie.class);
+                        startActivity(ev);
+                    }else if (opcion == "Animales Perdidos") {
                         //Toast.makeText(MainActivity.this, opcion, Toast.LENGTH_SHORT).show();
                         Intent in = new Intent(Main2Activity_Menu.this, Main2Activity_list_encontraranimal.class);
                         startActivity(in);

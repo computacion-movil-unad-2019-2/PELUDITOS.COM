@@ -32,7 +32,6 @@
         android:layout_marginEnd="51dp"
         android:layout_marginRight="51dp"
         android:background="#00796b"
-        android:onClick="Sesion"
         android:text="Iniciar Sesion"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,7 +39,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <Button
-        android:id="@+id/btn_"
+        android:id="@+id/btnInicio"
         android:layout_width="323dp"
         android:layout_height="40dp"
         android:layout_marginStart="51dp"
@@ -49,7 +48,6 @@
         android:layout_marginEnd="51dp"
         android:layout_marginRight="51dp"
         android:background="#ffc107"
-        android:onClick="Registro"
         android:text="Registrarse"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
@@ -66,7 +64,6 @@
         android:layout_marginEnd="51dp"
         android:layout_marginRight="51dp"
         android:background="#ffc107"
-        android:onClick="Registro"
         android:text="Registrarse"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
