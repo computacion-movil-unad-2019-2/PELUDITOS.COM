@@ -8,6 +8,15 @@
         </compositeConfiguration>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+<<<<<<< HEAD
+=======
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+          </set>
+        </option>
+>>>>>>> 305cd694dbd4a63e6f2a9a0fa5f330e561576d76
         <option name="resolveModulePerSourceSet" value="false" />
       </GradleProjectSettings>
     </option>

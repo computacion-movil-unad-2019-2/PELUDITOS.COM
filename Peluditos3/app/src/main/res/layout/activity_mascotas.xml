@@ -8,6 +8,26 @@
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android" >
 
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="75dp"
+        android:text="Hoja de Vida de la Mascota"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/imagenMascota"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:srcCompat="@tools:sample/avatars[0]" />
+
+    <Button
+        android:id="@+id/btnFoto"
+        android:layout_width="201dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="55dp"
+        android:text="Foto" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -18,30 +38,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
-            <TextView
-                android:id="@+id/textView6"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginLeft="45dp"
-                android:text="Hoja de Vida de la Mascota"
-                android:textSize="18sp" />
-
-            <ImageView
-                android:id="@+id/imagenMascota"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                tools:srcCompat="@tools:sample/avatars[0]" />
-
-            <Button
-                android:id="@+id/btnFoto"
-                android:layout_width="201dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="55dp"
-                android:textSize="14sp"
-                android:textColor="#ffff"
-                android:background="@drawable/button_rounded"
-                android:text="Foto" />
-
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -50,8 +46,7 @@
                 <android.support.design.widget.TextInputEditText
                     android:id="@+id/txtNombreMascota"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="text"/>
+                    android:layout_height="wrap_content" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -62,20 +57,18 @@
                 <android.support.design.widget.TextInputEditText
                     android:id="@+id/txtEdadMascota"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="number"/>
+                    android:layout_height="wrap_content" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:hint="Tamaño CM">
+                android:hint="Tamaño">
 
                 <android.support.design.widget.TextInputEditText
                     android:id="@+id/txtTamanoMascota"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="number"/>
+                    android:layout_height="wrap_content" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -87,16 +80,13 @@
                     android:id="@+id/txtTipo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Tipo"
-                    android:inputType="text"/>
+                    android:hint="hint" />
             </android.support.design.widget.TextInputLayout>
 
             <Spinner
                 android:id="@+id/spTipo"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="#0000FF"
-                />
+                android:layout_height="wrap_content" />
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
@@ -106,8 +96,7 @@
                 <android.support.design.widget.TextInputEditText
                     android:id="@+id/txtControlMedico"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="text"/>
+                    android:layout_height="wrap_content" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -118,8 +107,7 @@
                 <android.support.design.widget.TextInputEditText
                     android:id="@+id/txtCualidadesMascota"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="text"/>
+                    android:layout_height="wrap_content" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -130,8 +118,7 @@
                 <android.support.design.widget.TextInputEditText
                     android:id="@+id/txtUbicacionMascota"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="text"/>
+                    android:layout_height="wrap_content" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -142,8 +129,7 @@
                 <android.support.design.widget.TextInputEditText
                     android:id="@+id/txtEstado"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="text"/>
+                    android:layout_height="wrap_content" />
             </android.support.design.widget.TextInputLayout>
 
             <Spinner
@@ -155,10 +141,7 @@
                 android:id="@+id/btnGuardarMascota"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Guardar"
-                android:textSize="14sp"
-                android:textColor="#ffff"
-                android:background="@drawable/button_rounded"/>
+                android:text="Guardar" />
         </LinearLayout>
     </ScrollView>
 

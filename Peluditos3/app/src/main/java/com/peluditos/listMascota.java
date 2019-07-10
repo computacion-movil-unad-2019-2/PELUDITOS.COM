@@ -49,7 +49,6 @@ public class listMascota extends AppCompatActivity {
                 Intent intent = new Intent(getBaseContext(), mascotas.class );
                 intent.putExtra("actualizar","0");
                 intent.putExtra("id", "0");
-                finish();
                 startActivity(intent);
             }
         });
@@ -73,7 +72,6 @@ public class listMascota extends AppCompatActivity {
                     in.putExtra("tipo", obj.getTipo());
                     in.putExtra("foto",obj.getFoto());
                     in.putExtra("estado",obj.getEstado());
-                    finish();
                     startActivity(in);
                 }catch(Exception ex){
                     ex.printStackTrace();

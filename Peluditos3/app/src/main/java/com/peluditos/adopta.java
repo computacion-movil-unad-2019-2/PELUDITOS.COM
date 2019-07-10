@@ -105,7 +105,6 @@ public class adopta extends AppCompatActivity {
                     in.putExtra("tipo", obj1.getTipo());
                     in.putExtra("foto",obj1.getFoto());
                     in.putExtra("estado",obj1.getEstado());
-                    finish();
                     startActivity(in);
                 }catch(Exception ex){
                     ex.printStackTrace();

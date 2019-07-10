@@ -4,20 +4,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.entidades.adoptanteRespuesta;
-import com.entidades.tipo;
-import com.entidades.tipoRespuesta;
 import com.servicios.PostServiceAdoptante;
-import com.servicios.PostTipo;
-
-import java.util.ArrayList;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -39,10 +31,6 @@ public class Main2Activity_Adoptante extends AppCompatActivity {
     private EditText txtCedula;
     private Retrofit retrofit;
     private Button btnGuardarAdop;
-    private Spinner spTipo;
-    private String [] lstLista;
-    private TextView txtVTipoMascota;
-    private ArrayAdapter<String> lstMascota;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,8 +46,6 @@ public class Main2Activity_Adoptante extends AppCompatActivity {
         txtTelefono = (EditText) findViewById(R.id.txtTelefono);
         txtTipoMascota = (EditText) findViewById(R.id.txtTipoMascota);
         txtCedula = (EditText) findViewById(R.id.txtCedula);
-        spTipo = (Spinner) findViewById(R.id.spTipo);
-        txtVTipoMascota = (TextView)findViewById(R.id.txtVTipoMascota);
         btnGuardarAdop = findViewById(R.id.btnGuardarAdop);
 
         retrofit = new Retrofit.Builder()
@@ -90,7 +76,7 @@ public class Main2Activity_Adoptante extends AppCompatActivity {
             txtTipoMascota.setText(tipoMascota);
             txtCedula.setText(cedula);
 
-            spTipo.setEnabled(false);
+
             txtNombres.setEnabled(false);
             txtApellidos.setEnabled(false);
             txtEdad.setEnabled(false);
@@ -102,12 +88,9 @@ public class Main2Activity_Adoptante extends AppCompatActivity {
             txtCedula.setEnabled(false);
 
             btnGuardarAdop.setVisibility(View.INVISIBLE);
-            spTipo.setVisibility(View.INVISIBLE);
-            txtVTipoMascota.setVisibility(View.INVISIBLE);
-        }else{
-            txtTipoMascota.setVisibility(View.INVISIBLE);
+
+
         }
-        cargarTipo();
 
 
 
@@ -124,13 +107,11 @@ public class Main2Activity_Adoptante extends AppCompatActivity {
                     String estadoCivil = txtEstadoCivil.getText().toString().trim();
                     String correoElectronico = txtEmail.getText().toString().trim();
                     String numeroTelefono = txtTelefono.getText().toString().trim();
-                    //String tipoMascota = txtTipoMascota.getText().toString().trim();
-                    String tipoMascota = spTipo.getSelectedItem().toString().trim();
+                    String tipoMascota = txtTipoMascota.getText().toString().trim();
                     String cedula = txtCedula.getText().toString().trim();
 
                     if(nombres.trim().isEmpty() || apellidos.trim().isEmpty() || edad.trim().isEmpty()
                             || sexo.trim().isEmpty() || estadoCivil.trim().isEmpty()
-                            || tipoMascota.trim().isEmpty()
                             || correoElectronico.trim().isEmpty() || numeroTelefono.trim().isEmpty()
                             || tipoMascota.trim().isEmpty() || cedula.trim().isEmpty()){
 
@@ -151,7 +132,6 @@ public class Main2Activity_Adoptante extends AppCompatActivity {
                         txtCedula.setText("");
 
                         Toast.makeText(getBaseContext(), "Guardado con Exito", Toast.LENGTH_LONG).show();
-                        finish();
                     }
                 }catch(Exception e){
                     e.printStackTrace();
@@ -186,39 +166,6 @@ public class Main2Activity_Adoptante extends AppCompatActivity {
             @Override
             public void onFailure(Call<String> call, Throwable t) {
                 //Log.e(TAG, "Unable to submit post to API.");
-            }
-        });
-    }
-
-    private void cargarTipo(){
-        PostTipo service = retrofit.create(PostTipo.class);
-        Call<tipoRespuesta> listRespuestaCall = service.obtenerLista();
-
-        listRespuestaCall.enqueue(new Callback<tipoRespuesta>() {
-            @Override
-            public void onResponse(Call<tipoRespuesta> call, Response<tipoRespuesta> response) {
-
-                if(response.isSuccessful()){
-                    tipoRespuesta lstRespuesta = response.body();
-                    ArrayList<tipo> lstAdop = lstRespuesta.getResult();
-                    lstLista = new String[lstAdop.size()];
-                    int i = 0;
-                    for(tipo item : lstAdop)
-                    {
-                        lstLista[i] = item.getNombres();
-                        i += 1;
-                    }
-                    lstMascota = new ArrayAdapter<String>(getApplication(),android.R.layout.simple_spinner_item, lstLista);
-                    spTipo.setAdapter(lstMascota);
-
-                }else{
-                    Log.e(TAG, "onResponse:"+ response.errorBody());
-                }
-            }
-
-            @Override
-            public void onFailure(Call<tipoRespuesta> call, Throwable t) {
-                Log.e(TAG, "onFailure: "+ t.getMessage());
             }
         });
     }
