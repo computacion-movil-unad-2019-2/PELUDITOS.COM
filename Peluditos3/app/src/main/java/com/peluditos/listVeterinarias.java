@@ -60,7 +60,7 @@ public class listVeterinarias extends AppCompatActivity {
                     veterinaria obj = (veterinaria) adapter.getItem(position);
                     //Log.e("Guarderias :", obj.getNit()+"-"+obj.getRazonSocial());
                     //Toast.makeText(getBaseContext(), "Tu código es :"+obj.getNit(), Toast.LENGTH_LONG).show();
-                    Intent in = new Intent(getBaseContext(), guarderias.class);
+                    Intent in = new Intent(getBaseContext(), veterinarias.class);
                     in.putExtra("actualizar","1");
                     in.putExtra("nit", obj.getNit());
                     in.putExtra("nombre", obj.getRazonSocial());

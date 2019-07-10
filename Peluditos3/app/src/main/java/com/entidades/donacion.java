@@ -7,6 +7,7 @@ public class donacion {
     public String fecha;
     public String lugar;
     public String cantidad;
+    public String institucion;
 
     public String getProducto() {
         return producto;
@@ -47,4 +48,14 @@ public class donacion {
     public void setCantidad(String cantidad) {
         this.cantidad = cantidad;
     }
+
+    public String getInstitucion() {
+        return institucion;
+    }
+
+    public void setInstitucion(String institucion) {
+        this.institucion = institucion;
+    }
+
+
 }

@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(ev);
                 }
                 else if(opcion == "Donaciones en Especie"){
-                    Intent ev = new Intent(MainActivity.this, donacionEspecie.class);
+                    Intent ev = new Intent(MainActivity.this, listDonacionEspecie.class);
                     startActivity(ev);
                 }
             }

@@ -121,10 +121,10 @@ public class eventos extends AppCompatActivity {
         call.enqueue(new Callback<String>() {
             @Override
             public void onResponse(Call<String> call, Response<String> response) {
-                Log.i(TAG, "Responsestring :"+ response.body().toString());
+                Log.i(TAG, "Responsestring :"+ response.body());
                 if(response.isSuccessful()) {
                     if(response.body() != null) {
-                        Log.i(TAG, "onSuccess." + response.body().toString());
+                        Log.i(TAG, "onSuccess." + response.body());
                     }else{
                         Log.i(TAG, "Returned empty response");
                     }
