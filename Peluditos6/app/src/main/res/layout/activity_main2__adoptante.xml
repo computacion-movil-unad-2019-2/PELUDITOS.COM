@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+        <TextView
+            android:id="@+id/txtTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="75dp"
+            android:layout_marginEnd="8dp"
+            android:text="Información del Adoptante"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+
+                <EditText
+                    android:id="@+id/txtCedula"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Identificacion" />
+
+                <EditText
+                    android:id="@+id/txtNombres"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Nombres" />
+
+                <EditText
+                    android:id="@+id/txtApellidos"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Apellidos" />
+
+                <EditText
+                    android:id="@+id/txtEdad"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Edad" />
+
+                <EditText
+                    android:id="@+id/txtSexo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Genero" />
+
+                <EditText
+                    android:id="@+id/txtEstadoCivil"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Estado Civil" />
+
+                <EditText
+                    android:id="@+id/txtEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Correo Electronico" />
+
+                <EditText
+                    android:id="@+id/txtTelefono"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Número de Teléfono"
+                    android:inputType="phone" />
+
+                <EditText
+                    android:id="@+id/txtTipoMascota"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Tipo Mascota" />
+
+                <Button
+                    android:id="@+id/btnGuardarAdop"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Guardar"/>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
