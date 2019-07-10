@@ -79,7 +79,7 @@ public class donacionEspecie extends AppCompatActivity {
             Instituciones.setEnabled(false);
 
             btnConfirmar.setVisibility(View.INVISIBLE);
-        } 
+        }
        cargarTipo();
         btnConfirmar.setOnClickListener(new View.OnClickListener() {
             @Override
