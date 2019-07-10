@@ -24,10 +24,13 @@
         <activity android:name=".listAgenda" />
         <activity android:name=".lstAdoptante" />
         <activity android:name=".listMascota" />
+        <activity android:name=".guarderias" />
+        <activity android:name=".listGuarderias" />
         <activity android:name=".Main2Activity_listAdoptante" />
         <activity android:name=".Main2Activity_Mascota" />
         <activity android:name=".Main2Activity_Adoptante" />
         <activity android:name=".listInstituciones" />
+        <activity android:name=".calificarServicio" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
