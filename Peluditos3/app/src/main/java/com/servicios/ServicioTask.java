@@ -57,6 +57,9 @@ public class ServicioTask extends AsyncTask<Void, Void, String> {
             parametrosPost.put("razonSocial",this.institucion.getRazonSocial().toString());
             parametrosPost.put("objetivo",this.institucion.getObjetivo().toString());
             parametrosPost.put("ubicacion",this.institucion.getUbicacion().toString());
+            parametrosPost.put("tipo",this.institucion.getTipo().toString());
+            parametrosPost.put("cuenta",this.institucion.getCuenta().toString());
+            parametrosPost.put("banco",this.institucion.getBanco().toString());
 
             //DEFINIR PARAMETROS DE CONEXION
             urlConnection.setReadTimeout(15000);
@@ -114,7 +117,7 @@ public class ServicioTask extends AsyncTask<Void, Void, String> {
         super.onPostExecute(s);
         progressDialog.dismiss();
         resulatdoapi=s;
-        Toast.makeText(httpContext,resulatdoapi,Toast.LENGTH_LONG).show();
+        //Toast.makeText(httpContext,resulatdoapi,Toast.LENGTH_LONG).show();
     }
 
     // Funciones

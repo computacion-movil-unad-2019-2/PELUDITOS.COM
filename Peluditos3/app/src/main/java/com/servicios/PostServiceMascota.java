@@ -35,7 +35,8 @@ public interface PostServiceMascota {
                           @Field("ciudadReferencia") String ciudadReferencia,
                           @Field("ubicacion") String ubicacion,
                           @Field("tipo") String tipo,
-                          @Field("estado") String estado
+                          @Field("estado") String estado,
+                          @Field("foto") String foto
     );
 
     @GET("mascota/consulta")

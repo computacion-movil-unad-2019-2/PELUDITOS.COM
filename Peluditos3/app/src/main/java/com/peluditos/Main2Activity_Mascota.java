@@ -140,9 +140,10 @@ public class Main2Activity_Mascota extends AppCompatActivity {
     public void sendPost(String id, String nombres, String edad, String tamano,
                          String controlMedico, String ciudadReferencia, String ubicacion) {
 
+        String foto ="";
         PostServiceMascota service = retrofit.create(PostServiceMascota.class);
         Call<String> call = service.savePost(id, nombres, edad,
-                tamano, controlMedico, ciudadReferencia, ubicacion, "perro","Disponible");
+                tamano, controlMedico, ciudadReferencia, ubicacion, "perro","Disponible", foto);
 
         call.enqueue(new Callback<String>() {
             @Override
