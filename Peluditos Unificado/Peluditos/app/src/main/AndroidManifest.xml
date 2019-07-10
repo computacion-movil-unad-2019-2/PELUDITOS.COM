@@ -27,6 +27,13 @@
         <activity android:name=".Main2Activity_Mascota" />
         <activity android:name=".Main2Activity_Adoptante" />
         <activity android:name=".listInstituciones" />
+        <activity android:name=".calificarServicio" />
+        <activity android:name=".listGuarderias" />
+        <activity android:name=".listDonacionEspecie" />
+        <activity android:name=".listEvento" />
+        <activity android:name=".guarderias" />
+        <activity android:name=".donacionEspecie" />
+        <activity android:name=".eventos" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
