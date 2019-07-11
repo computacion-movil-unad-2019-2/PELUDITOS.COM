@@ -2,10 +2,22 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.peluditos">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+<<<<<<< HEAD
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-feature android:name="android.hardware.camera" android:required="true" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+=======
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+>>>>>>> 9b465a768adf9b92330a7bdc45a65479d56b0273
 
     <application
         android:allowBackup="true"
@@ -14,7 +26,32 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".cumpleAgenda"></activity>
+<<<<<<< HEAD
+        <activity android:name=".listDonacionDinero"></activity>
+        <activity android:name=".DonacionesDinero" />
+        <activity android:name=".listExperiencias" />
+        <activity android:name=".experiencias" />
+        <activity android:name=".listComedores" />
+        <activity android:name=".comedores" />
+        <activity android:name=".listClubes" />
+        <activity android:name=".clubes" />
+        <activity android:name=".cumpleAgenda" />
+=======
+        <activity android:name=".Main2Activity_inicioSesion"></activity>
+        <activity android:name=".Main2Activity_registro" />
+        <activity android:name=".Main2Activity_Menu" />
+        <activity android:name=".Denunciasmaltrato" />
+        <activity android:name=".Main2Activity_denunciaslist" />
+        <activity android:name=".Encontraranimal" />
+        <activity android:name=".Main2Activity_list_encontraranimal" />
+        <activity android:name=".listDonacionEspecie"></activity>
+        <activity android:name=".donacionEspecie" />
+        <activity android:name=".listGuarderias" />
+        <activity android:name=".guarderias" />
+        <activity android:name=".calificarServicio" />
+        <activity android:name=".listEvento" />
+        <activity android:name=".eventos" />
+>>>>>>> 9b465a768adf9b92330a7bdc45a65479d56b0273
         <activity android:name=".agendar" />
         <activity android:name=".hojaMascota" />
         <activity android:name=".mascotas" />
@@ -27,28 +64,17 @@
         <activity android:name=".Main2Activity_Mascota" />
         <activity android:name=".Main2Activity_Adoptante" />
         <activity android:name=".listInstituciones" />
-        <activity android:name=".calificarServicio" />
-        <activity android:name=".listGuarderias" />
-        <activity android:name=".listDonacionEspecie" />
-        <activity android:name=".listEvento" />
-        <activity android:name=".guarderias" />
-        <activity android:name=".donacionEspecie" />
-        <activity android:name=".eventos" />
+        <activity android:name=".Instituciones"/>
         <activity android:name=".MainActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Instituciones">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
+<<<<<<< HEAD
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="com.peluditos.android.fileprovider"
@@ -56,9 +82,11 @@
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_paths">
-            </meta-data>
+                android:resource="@xml/file_paths" />
         </provider>
+=======
+
+>>>>>>> 9b465a768adf9b92330a7bdc45a65479d56b0273
     </application>
 
 </manifest>
