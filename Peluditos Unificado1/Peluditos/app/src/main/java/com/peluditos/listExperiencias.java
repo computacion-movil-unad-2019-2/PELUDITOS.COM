@@ -59,7 +59,7 @@ public class listExperiencias extends AppCompatActivity {
                     experiencia obj = (experiencia) adapter.getItem(position);
                     Log.e("Experiencias :", obj.getVivencia()+" - "+obj.getLugar());
                     Toast.makeText(getBaseContext(), "Lugar de la Experiencia : "+obj.getLugar(), Toast.LENGTH_LONG).show();
-                    Intent in = new Intent(getBaseContext(), guarderias.class);
+                    Intent in = new Intent(getBaseContext(), experiencia.class);
                     in.putExtra("actualizar","1");
                     in.putExtra("nit", obj.getVivencia());
                     in.putExtra("nombre", obj.getLugar());

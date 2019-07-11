@@ -59,7 +59,7 @@ public class listClubes extends AppCompatActivity {
                     club obj = (club) adapter.getItem(position);
                     Log.e("Clubes :", obj.getNit()+"-"+obj.getRazonSocial());
                     Toast.makeText(getBaseContext(), "Tu código es :"+obj.getNit(), Toast.LENGTH_LONG).show();
-                    Intent in = new Intent(getBaseContext(), guarderias.class);
+                    Intent in = new Intent(getBaseContext(), clubes.class);
                     in.putExtra("actualizar","1");
                     in.putExtra("nit", obj.getNit());
                     in.putExtra("nombre", obj.getRazonSocial());

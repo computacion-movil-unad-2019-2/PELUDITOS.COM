@@ -27,7 +27,6 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class listDonacionDinero extends AppCompatActivity {
 
     private static final String TAG = "PELUDITOS";
-    private Button btnNuevo;
     private Retrofit retrofit;
     private ListView lvDonaDinero;
     adapterDonacionDinero adapter;
