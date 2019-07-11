@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -13,20 +14,35 @@ public class MainActivity extends AppCompatActivity {
 
     private ListView lv1;
 
+<<<<<<< HEAD
     private String opciones [] = {"Instituciones","Mascotas","Adoptante", "Adopta","Calificar Servicio","Guarderias","Eventos","Donacion en especie",
             "Clubes de mascotas","Comedores Comunitarios","Experiencias","Donaciones en Dinero"};
+=======
+    //  private String opciones [] = {"Instituciones","Mascotas","Adoptante", "Adopta", "Eventos","Calificar Servicio","Guarderias","Veterinarias","Donaciones en Especie"};
+
+>>>>>>> 9b465a768adf9b92330a7bdc45a65479d56b0273
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Button btnRegistro = (Button) findViewById(R.id.Btn_Registro);
+        Button btnInicio = (Button) findViewById(R.id.Btn_Inicio);
 
-        lv1 = (ListView)findViewById(R.id.lv1);
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.list_item_opciones, opciones);
-        lv1.setAdapter(adapter);
-
-        lv1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        btnRegistro.setOnClickListener(new View.OnClickListener() {
             @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getBaseContext(), Main2Activity_registro.class );
+                intent.putExtra("actualizar","0");
+                startActivity(intent);
+            }
+        });
+
+        btnInicio.setOnClickListener(new View.OnClickListener() {
+            @Override
+<<<<<<< HEAD
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String opcion = opciones[position];
                 if(opcion == "Instituciones"){
@@ -85,7 +101,18 @@ public class MainActivity extends AppCompatActivity {
                     Intent in = new Intent(MainActivity.this, listDonacionDinero.class);
                     startActivity(in);
                 }
+=======
+
+            public void onClick(View v) {
+                Intent intent = new Intent(getBaseContext(), Main2Activity_inicioSesion.class );
+                intent.putExtra("actualizar","0");
+                startActivity(intent);
+>>>>>>> 9b465a768adf9b92330a7bdc45a65479d56b0273
             }
         });
+
+
+
     }
+
 }

@@ -22,7 +22,6 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-<<<<<<< HEAD
         android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity android:name="com.peluditos.Main2Activity_inicioSesion" />
@@ -45,8 +44,9 @@
         <activity android:name="com.peluditos.Main2Activity_Adoptante" />
         <activity android:name="com.peluditos.listInstituciones" />
         <activity android:name="com.peluditos.MainActivity" >
-=======
-        android:theme="@style/AppTheme">
+
+
+
         <activity android:name=".Main2Activity_inicioSesion"></activity>
         <activity android:name=".Main2Activity_registro" />
         <activity android:name=".Main2Activity_Menu" />
