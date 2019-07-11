@@ -43,6 +43,14 @@
         <activity android:name=".Main2Activity_denunciaslist" />
         <activity android:name=".Encontraranimal" />
         <activity android:name=".Main2Activity_list_encontraranimal" />
+        <activity android:name=".listDonacionDinero" />
+        <activity android:name=".DonacionesDinero" />
+        <activity android:name=".listExperiencias" />
+        <activity android:name=".experiencias" />
+        <activity android:name=".listComedores" />
+        <activity android:name=".comedores" />
+        <activity android:name=".listClubes" />
+        <activity android:name=".clubes" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

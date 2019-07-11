@@ -14,7 +14,8 @@ public class Main2Activity_Menu extends AppCompatActivity {
         private ListView lv1;
 
         private String opciones [] = {"Instituciones","Mascotas","Adoptante", "Adopta",
-                "Animales Perdidos", "Denuncias Maltrato"};
+                "Animales Perdidos", "Denuncias Maltrato","Calificar Servicio","Guarderias","Eventos","Donacion en especie",
+                "Clubes de mascotas","Comedores Comunitarios","Experiencias","Donaciones en Dinero"};
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -79,7 +80,44 @@ public class Main2Activity_Menu extends AppCompatActivity {
                         //Toast.makeText(MainActivity.this, opcion, Toast.LENGTH_SHORT).show();
                         Intent in = new Intent(Main2Activity_Menu.this, listseguimientodenuncia.class);
                         startActivity(in);
+                    }else if(opcion == "Calificar Servicio"){
+                        //Toast.makeText(MainActivity.this, opcion, Toast.LENGTH_SHORT).show();
+                        Intent in = new Intent(Main2Activity_Menu.this, calificarServicio.class);
+                        startActivity(in);
                     }
+                    else if(opcion == "Guarderias"){
+                        //Toast.makeText(MainActivity.this, opcion, Toast.LENGTH_SHORT).show();
+                        Intent in = new Intent(Main2Activity_Menu.this, listGuarderias.class);
+                        startActivity(in);
+                    }
+                    else if(opcion == "Eventos"){
+                        //Toast.makeText(MainActivity.this, opcion, Toast.LENGTH_SHORT).show();
+                        Intent in = new Intent(Main2Activity_Menu.this, listEvento.class);
+                        startActivity(in);
+                    }else if(opcion == "Donacion en especie"){
+                        //Toast.makeText(MainActivity.this, opcion, Toast.LENGTH_SHORT).show();
+                        Intent in = new Intent(Main2Activity_Menu.this, listDonacionEspecie.class);
+                        startActivity(in);
+                    }
+                    else if(opcion == "Clubes de mascotas"){
+                        //Toast.makeText(MainActivity.this, opcion, Toast.LENGTH_SHORT).show();
+                        Intent in = new Intent(Main2Activity_Menu.this, listClubes.class);
+                        startActivity(in);
+                    }else if(opcion == "Comedores Comunitarios"){
+                        //Toast.makeText(MainActivity.this, opcion, Toast.LENGTH_SHORT).show();
+                        Intent in = new Intent(Main2Activity_Menu.this, listComedores.class);
+                        startActivity(in);
+                    }
+                    else if(opcion == "Experiencias"){
+                        //Toast.makeText(MainActivity.this, opcion, Toast.LENGTH_SHORT).show();
+                        Intent in = new Intent(Main2Activity_Menu.this, listExperiencias.class);
+                        startActivity(in);
+                    }else if(opcion == "Donaciones en Dinero"){
+                        //Toast.makeText(MainActivity.this, opcion, Toast.LENGTH_SHORT).show();
+                        Intent in = new Intent(Main2Activity_Menu.this, listDonacionDinero.class);
+                        startActivity(in);
+                    }
+
 
 
                 }

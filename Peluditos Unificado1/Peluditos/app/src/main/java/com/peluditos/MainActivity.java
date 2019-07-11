@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        super.onCreate(savedInstanceState);
+      /*  super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Button btnRegistro = (Button) findViewById(R.id.Btn_Registro);
         Button btnInicio = (Button) findViewById(R.id.Btn_Inicio);
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-
+*/
     }
 
 }
