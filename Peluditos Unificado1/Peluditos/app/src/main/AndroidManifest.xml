@@ -51,6 +51,8 @@
         <activity android:name=".comedores" />
         <activity android:name=".listClubes" />
         <activity android:name=".clubes" />
+        <activity android:name=".listVeterinarias" />
+        <activity android:name=".veterinarias" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

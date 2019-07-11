@@ -43,15 +43,7 @@ public class listDonacionDinero extends AppCompatActivity {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
-       /* btnNuevo = findViewById(R.id.btnNuevo);
-        btnNuevo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(),experiencias.class );
-                intent.putExtra("actualizar","0");
-                startActivity(intent);
-            }
-        }); */
+
         obtenerDatos();
 
         lvDonaDinero.setOnItemClickListener(new AdapterView.OnItemClickListener() {
