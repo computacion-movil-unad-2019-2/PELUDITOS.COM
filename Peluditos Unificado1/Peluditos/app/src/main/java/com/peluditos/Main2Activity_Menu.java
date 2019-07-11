@@ -94,9 +94,9 @@ public class Main2Activity_Menu extends AppCompatActivity {
                         //Toast.makeText(MainActivity.this, opcion, Toast.LENGTH_SHORT).show();
                         Intent in = new Intent(Main2Activity_Menu.this, listEvento.class);
                         startActivity(in);
-                    }else if(opcion == "Donacion en especie"){
+                    }else if(opcion == "Donaciones en Dinero"){
                         //Toast.makeText(MainActivity.this, opcion, Toast.LENGTH_SHORT).show();
-                        Intent in = new Intent(Main2Activity_Menu.this, listDonacionEspecie.class);
+                        Intent in = new Intent(Main2Activity_Menu.this, listDonacionDinero.class);
                         startActivity(in);
                     }
                     else if(opcion == "Clubes de mascotas"){

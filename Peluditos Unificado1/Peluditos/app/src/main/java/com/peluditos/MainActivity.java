@@ -14,8 +14,6 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
    // private ListView lv1;
-
-  //  private String opciones [] = {"Instituciones","Mascotas","Adoptante", "Adopta","Calificar Servicio","Guarderias","Eventos","Donacion en especie"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -43,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        
+
     }
 
 }
