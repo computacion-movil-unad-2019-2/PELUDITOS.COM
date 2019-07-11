@@ -15,7 +15,7 @@ public class Main2Activity_Menu extends AppCompatActivity {
 
         private String opciones [] = {"Instituciones","Mascotas","Adoptante", "Adopta",
                 "Animales Perdidos", "Denuncias Maltrato","Calificar Servicio","Guarderias","Eventos","Donacion en especie",
-                "Clubes de mascotas","Comedores Comunitarios","Experiencias","Donaciones en Dinero"};
+                "Clubes de mascotas","Comedores Comunitarios","Experiencias","Donaciones en Dinero","Veterinarias"};
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -112,9 +112,10 @@ public class Main2Activity_Menu extends AppCompatActivity {
                         //Toast.makeText(MainActivity.this, opcion, Toast.LENGTH_SHORT).show();
                         Intent in = new Intent(Main2Activity_Menu.this, listExperiencias.class);
                         startActivity(in);
-                    }else if(opcion == "Donaciones en Dinero"){
+                    }
+                    else if(opcion == "Veterinarias"){
                         //Toast.makeText(MainActivity.this, opcion, Toast.LENGTH_SHORT).show();
-                        Intent in = new Intent(Main2Activity_Menu.this, listDonacionDinero.class);
+                        Intent in = new Intent(Main2Activity_Menu.this, listVeterinarias.class);
                         startActivity(in);
                     }
 
