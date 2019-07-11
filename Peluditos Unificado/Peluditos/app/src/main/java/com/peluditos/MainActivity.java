@@ -13,7 +13,8 @@ public class MainActivity extends AppCompatActivity {
 
     private ListView lv1;
 
-    private String opciones [] = {"Instituciones","Mascotas","Adoptante", "Adopta","Calificar Servicio","Guarderias","Eventos","Donacion en especie"};
+    private String opciones [] = {"Instituciones","Mascotas","Adoptante", "Adopta","Calificar Servicio","Guarderias","Eventos","Donacion en especie",
+            "Clubes de mascotas","Comedores Comunitarios","Experiencias","Donaciones en Dinero"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,6 +65,24 @@ public class MainActivity extends AppCompatActivity {
                 }else if(opcion == "Donacion en especie"){
                     //Toast.makeText(MainActivity.this, opcion, Toast.LENGTH_SHORT).show();
                     Intent in = new Intent(MainActivity.this, listDonacionEspecie.class);
+                    startActivity(in);
+                }
+                else if(opcion == "Clubes de mascotas"){
+                    //Toast.makeText(MainActivity.this, opcion, Toast.LENGTH_SHORT).show();
+                    Intent in = new Intent(MainActivity.this, listClubes.class);
+                    startActivity(in);
+                }else if(opcion == "Comedores Comunitarios"){
+                    //Toast.makeText(MainActivity.this, opcion, Toast.LENGTH_SHORT).show();
+                    Intent in = new Intent(MainActivity.this, listComedores.class);
+                    startActivity(in);
+                }
+                else if(opcion == "Experiencias"){
+                    //Toast.makeText(MainActivity.this, opcion, Toast.LENGTH_SHORT).show();
+                    Intent in = new Intent(MainActivity.this, listExperiencias.class);
+                    startActivity(in);
+                }else if(opcion == "Donaciones en Dinero"){
+                    //Toast.makeText(MainActivity.this, opcion, Toast.LENGTH_SHORT).show();
+                    Intent in = new Intent(MainActivity.this, listDonacionDinero.class);
                     startActivity(in);
                 }
             }
