@@ -34,6 +34,15 @@
         <activity android:name=".guarderias" />
         <activity android:name=".donacionEspecie" />
         <activity android:name=".eventos" />
+        <activity android:name=".Seguimientodenuncia"></activity>
+        <activity android:name=".listseguimientodenuncia" />
+        <activity android:name=".Main2Activity_inicioSesion" />
+        <activity android:name=".Main2Activity_registro" />
+        <activity android:name=".Main2Activity_Menu" />
+        <activity android:name=".Denunciasmaltrato" />
+        <activity android:name=".Main2Activity_denunciaslist" />
+        <activity android:name=".Encontraranimal" />
+        <activity android:name=".Main2Activity_list_encontraranimal" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
