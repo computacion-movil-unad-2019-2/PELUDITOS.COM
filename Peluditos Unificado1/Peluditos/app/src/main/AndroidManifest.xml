@@ -2,10 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.peluditos">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-feature android:name="android.hardware.camera" android:required="true" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -14,7 +17,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".cumpleAgenda"></activity>
+        <activity android:name=".UserLogin"></activity>
+        <activity android:name=".cumpleAgenda" />
         <activity android:name=".agendar" />
         <activity android:name=".hojaMascota" />
         <activity android:name=".mascotas" />
@@ -34,7 +38,7 @@
         <activity android:name=".guarderias" />
         <activity android:name=".donacionEspecie" />
         <activity android:name=".eventos" />
-        <activity android:name=".Seguimientodenuncia"></activity>
+        <activity android:name=".Seguimientodenuncia" />
         <activity android:name=".listseguimientodenuncia" />
         <activity android:name=".Main2Activity_inicioSesion" />
         <activity android:name=".Main2Activity_registro" />
@@ -75,8 +79,7 @@
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_paths">
-            </meta-data>
+                android:resource="@xml/file_paths"></meta-data>
         </provider>
     </application>
 

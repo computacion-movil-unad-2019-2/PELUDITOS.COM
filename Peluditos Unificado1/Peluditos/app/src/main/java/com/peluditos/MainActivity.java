@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
 
             public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(), Main2Activity_inicioSesion.class );
+                Intent intent = new Intent(getBaseContext(), UserLogin.class );
                 intent.putExtra("actualizar","0");
                 startActivity(intent);
             }

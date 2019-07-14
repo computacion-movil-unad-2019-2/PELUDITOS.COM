@@ -1,6 +1,5 @@
 package com.servicios;
 
-import com.entidades.encontraranimalRespuesta;
 import com.entidades.usuarioRespuesta;
 
 import retrofit2.Call;
@@ -9,7 +8,7 @@ import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 
-public interface PostServiceUsuario {
+public interface PostLoginUser {
 
     @GET("usuario/")
     Call<usuarioRespuesta> obtenerLista();
@@ -23,7 +22,4 @@ public interface PostServiceUsuario {
                           @Field("documento") String documento
 
     );
-
-
-    void execute();
 }
